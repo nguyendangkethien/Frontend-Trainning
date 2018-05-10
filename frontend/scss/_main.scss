@@ -1,0 +1,120 @@
+.b__home_page{
+	color: $color-text-default;
+  	font-family: $font-body;
+  	font-size: 15px;
+  	.homepage-body-top{
+  		background: $color-background-body-top;
+  	}
+  	.homepage-body-bottom{
+  		background: $color-white;
+  	}
+}
+@for $i from 1 through 6{
+    #{h}#{$i}{
+    	font-family: $font-title;
+    	font-weight: 500;
+    }
+}
+
+@for $i from 0 through 10{
+$paddingUp : (5px*$i) !important;
+    .#{p}-#{$i}{
+    	padding:$paddingUp;
+    }
+    .#{m}-#{$i}{
+    	padding:$paddingUp;
+    }
+    .#{pt}-#{$i}{
+    	padding-top:$paddingUp;
+    }
+    .#{pb}-#{$i}{
+    	padding-bottom:$paddingUp;
+    }
+    .#{pl}-#{$i}{
+    	padding-left:$paddingUp;
+    }
+    .#{pr}-#{$i}{
+    	padding-right:$paddingUp;
+    }
+    .#{mt}-#{$i}{
+    	margin-top:$paddingUp;
+    }
+    .#{mb}-#{$i}{
+    	margin-bottom:$paddingUp;
+    }
+    .#{ml}-#{$i}{
+    	margin-left:$paddingUp;
+    }
+    .#{mr}-#{$i}{
+    	margin-right:$paddingUp;
+    }
+}
+
+%tag-a-default-scss{
+	color: inherit;
+	outline: none!important;
+    background-color: transparent;
+}
+
+a{
+	@extend %tag-a-default-scss;
+	outline: none!important;
+	&:hover{
+		@extend %tag-a-default-scss;
+	}
+}
+
+.btn{
+	display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.fl-l{
+	float: left;
+}
+
+.fl-r{
+	float: right;
+}
+
+.w-50{ width: 50%; }
+
+.display-flex {
+	display: flex!important;
+}
+
+.align-items-center {
+	-webkit-box-align: center!important;
+	-webkit-align-items: center!important;
+	-ms-flex-align: center!important;
+	align-items: center!important;
+}
+
+.d-flex {
+	display: -webkit-box!important;
+	display: -webkit-flex!important;
+	display: -ms-flexbox!important;
+	display: flex!important;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+}
+
+.mb-5px{
+	margin-bottom: 5px;
+}
+.switch-off{
+	display: none;
+}
